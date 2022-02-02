@@ -28,7 +28,8 @@ function Login() {
 				password === "$abc@svce22" &&
 				usertype === "President"
 			) {
-				alert("Successfully Logged in!!");
+				if (!alert("Successfully Logged in!!"))
+					document.location = "http://localhost:3000/president";
 				setusername("");
 				setpassword("");
 			} else {
@@ -37,8 +38,11 @@ function Login() {
 		}
 	};
 	const handleClick = () => {
-		Axios.post("http://localhost:3001/validate",{username:username,password:password});
-	 }
+		Axios.post("http://localhost:3001/validate", {
+			username: username,
+			password: password,
+		});
+	};
 	return (
 		<div className="black-bubble">
 			<div className="header">
@@ -55,8 +59,11 @@ function Login() {
 					laoreet tellus.{" "}
 				</p>
 			</div>
-			 <form
+			<form
 				className="loginform"
+				onSubmit={(e) => {
+					onSubmitHandler(e);
+				}}
 			>
 				<div>
 					<h2>LOGIN</h2>

@@ -1,20 +1,20 @@
 import React from "react";
-import Abstraction from "../../assets/images/abstraction_1.0.jpg";
-import Disrupt from "../../assets/images/disrupt.jpg";
-import Women from "../../assets/images/women_in_tech.png";
+import Conf from "../../assets/images/conf-workshop.jpg";
+import Disrupt from "../../assets/images/gmeet.jpg";
+import Women from "../../assets/images/hack.jpg";
 function Events() {
 	return (
 		<div
 			id="carouselExampleCaptions"
-			class="carousel slide"
+			className="carousel slide"
 			data-bs-ride="carousel"
 		>
-			<div class="carousel-indicators">
+			<div className="carousel-indicators">
 				<button
 					type="button"
 					data-bs-target="#carouselExampleCaptions"
 					data-bs-slide-to="0"
-					class="active"
+					className="active"
 					aria-current="true"
 					aria-label="Slide 1"
 				></button>
@@ -31,34 +31,34 @@ function Events() {
 					aria-label="Slide 3"
 				></button>
 			</div>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img src={Abstraction} class="d-block w-100" alt="..." />
+			<div className="carousel-inner">
+				<div className="carousel-item active">
+					<img src={Conf} className="d-block w-100" alt="..." />
 				</div>
-				<div class="carousel-item">
-					<img src={Disrupt} class="d-block w-100" alt="..." />
+				<div className="carousel-item">
+					<img src={Disrupt} className="d-block w-100" alt="..." />
 				</div>
-				<div class="carousel-item">
-					<img src={Women} class="d-block w-100" alt="..." />
+				<div className="carousel-item">
+					<img src={Women} className="d-block w-100" alt="..." />
 				</div>
 			</div>
 			<button
-				class="carousel-control-prev"
+				className="carousel-control-prev"
 				type="button"
 				data-bs-target="#carouselExampleCaptions"
 				data-bs-slide="prev"
 			>
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
+				<span className="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span className="visually-hidden">Previous</span>
 			</button>
 			<button
-				class="carousel-control-next"
+				className="carousel-control-next"
 				type="button"
 				data-bs-target="#carouselExampleCaptions"
 				data-bs-slide="next"
 			>
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
+				<span className="carousel-control-next-icon" aria-hidden="true"></span>
+				<span className="visually-hidden">Next</span>
 			</button>
 		</div>
 	);
